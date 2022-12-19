@@ -9,7 +9,9 @@
   <body>
     <div>index.html</div>
     <div>
-      <a href="/helloWorldServlets">helloWorldServlets</a>
+      <a href="/helloWorldServlets?firstName=kim&secondName=seokjin"
+        >helloWorldServlets</a
+      >
     </div>
     <div>
       <a href="/searchFormServlet">searchFormServlet</a>
@@ -29,6 +31,9 @@
     <div>Form element</div>
     <div>
       <form action="/helloWorldServlets" method="get">
+        <input type="text" name="firstName" id="" value="Kim" />
+        <input type="text" name="secondName" id="" value="Seokjin" />
+        <input type="hidden" name="hiddenParam" value="yojulab" />
         <button>helloWorldServlets</button>
       </form>
       <form action="/searchFormServlet" method="get">
@@ -46,6 +51,9 @@
       <form action="/tablesBeanListServlets" method="get">
         <button>tablesBeanListServlets</button>
       </form>
+      <div>
+        <a href="/simple/WithDBServlets.html"></a>
+      </div>
     </div>
   </body>
 </html>
