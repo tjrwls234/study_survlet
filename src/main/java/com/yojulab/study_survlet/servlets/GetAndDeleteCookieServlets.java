@@ -25,8 +25,11 @@ public class GetAndDeleteCookieServlets extends HttpServlet {
             String name = cookie.getName();
             String value = cookie.getValue();
             printWriter.println("<div>Cookie Name : " + name + ", value : " + value + "</div>");
+
+            // delete cookie
             if (name.equals("secondName")) {
                 cookie.setMaxAge(0);
+                response.addCookie(cookie);
             }
         }
         printWriter.close();

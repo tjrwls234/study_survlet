@@ -52,7 +52,7 @@ public class SimpleWithDB {
                 resultSetAnswer.close();
                 HashMap<String, Object> bundle = new HashMap<>();
                 bundle.put("question", question);
-                bundle.put("example_list", example_list);
+                bundle.put("answer", example_list);
 
                 bundle_list.add(bundle);
             }

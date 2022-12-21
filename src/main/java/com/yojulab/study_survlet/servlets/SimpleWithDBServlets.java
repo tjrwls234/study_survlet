@@ -21,26 +21,20 @@ public class SimpleWithDBServlets extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         // biz with DB
         SimpleWithDB simpleWithDB = new SimpleWithDB();
-        simpleWithDB.getList();
         ArrayList<HashMap> bundle_list = simpleWithDB.getList();
+        // display
+        PrintWriter printWriter = response.getWriter();
+        printWriter.println("<div>SimpleWithDBServlets</div>");
         for (int i = 0; i < bundle_list.size(); i++) {
             HashMap<String, Object> bundle = bundle_list.get(i);
             HashMap<String, Object> question = (HashMap<String, Object>) bundle.get("question");
             int orders = (int) question.get("ORDERS");
             String questions = (String) question.get("QUESTIONS");
             String questions_uid = (String) question.get("QUESTIONS_UID");
+            printWriter.println(
+                    "<div>" + orders + ". " + questions + "<input type='hidden' value='" + questions_uid + "'</div>");
 
         }
-        // display
-        PrintWriter printWriter = response.getWriter();
-        printWriter.println("<div>SimpleWithDBServlets</div>");
-        HashMap<String, Object> bundle = bundle_list.get(i);
-        HashMap<String, Object> question = (HashMap<String, Object>) bundle.get("question");
-        int orders = (int) question.get("ORDERS");
-        String questions = (String) question.get("QUESTIONS");
-        String questions_uid = (String) question.get("QUESTIONS_UID");
-        printWriter.println(
-                "<div>" + orders + ". " + questions + "<input type='hidden' value='" + questions_uid + "'</div>");
         printWriter.close();
     }
 }

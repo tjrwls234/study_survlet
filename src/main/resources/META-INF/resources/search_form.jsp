@@ -26,9 +26,9 @@
           />
         </div>
         <% if (day ==1 || day ==7) {%>
-        <div>Today is Weekend !<%= day %></div>
+        <div>Today is Weekend ! <%= day %></div>
         <% } else { %>
-        <div>Today is Now Weekend !<%= day %></div>
+        <div>Today is Now Weekend ! <%= day %></div>
         <% } %>
       </div>
     </form>

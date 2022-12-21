@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
@@ -11,27 +14,14 @@
     <link rel="stylesheet" href="./css/commons.css" />
   </head>
   <body>
-    <%! int day = 3; %>
-    <form action="">
-      <div class="container">
-        <div class="fs-3">Search Form</div>
-        <div>
-          <label for="" class="form-label">Search with Name</label>
-          <input
-            type="email"
-            name=""
-            id=""
-            class="form-control"
-            placeholder="Input Name"
-          />
-        </div>
-        <% if (day ==1 || day ==7) {%>
-        <div>Today is Weekend !<%= day %></div>
-        <% } else { %>
-        <div>Today is Now Weekend !<%= day %></div>
-        <% } %>
+    <nav class="navbar navbar-expand bg-light">
+      <div class="navbar-nav">
+        <a href="" class="nav-link">Home</a>
+        <a href="" class="nav-link">Feature</a>
+        <a href="" class="nav-link">Pricing</a>
       </div>
-    </form>
+    </nav>
+    <hr class="hr" />
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
