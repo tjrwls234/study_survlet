@@ -1,7 +1,6 @@
 package com.yojulab.study_survlet.servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.HashMap;
 
@@ -25,20 +24,20 @@ public class DetailServlets extends HttpServlet {
         // biz with DB and Class
 
         PollWithDB pollWithDB = new PollWithDB();
-        HashMap<String, Object> questions = null;
+        HashMap<String, Object> question = null;
         try {
-            questions = pollWithDB.getQuestion(questions_Uid);
-            System.out.println(questions.get("QUESTIONS_UID"));
-            System.out.println(questions.get("QUESTIONS"));
-            System.out.println(questions.get("ORDERS"));
+            question = pollWithDB.getQuestion(questions_Uid);
+            System.out.println(question.get("QUESTIONS_UID"));
+            System.out.println(question.get("QUESTIONS"));
+            System.out.println(question.get("QRDERS"));
         } catch (SQLException e) {
             e.printStackTrace();
         }
         // output with html
         response.setContentType("text/html;charset=UTF-8");
-        request.setAttribute("questions", questions);
+        request.setAttribute("questions", question);
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/polls/details.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/polls/detail.jsp");
         requestDispatcher.forward(request, response);
 
     }

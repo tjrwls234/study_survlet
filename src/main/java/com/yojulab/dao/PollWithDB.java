@@ -15,13 +15,14 @@ public class PollWithDB {
                 "WHERE QUESTIONS_UID = '" + questionsUid + "'";
 
         ResultSet resultSet = statement.executeQuery(query);
-        HashMap<String, Object> result;
+        HashMap<String, Object> result = null;
         while (resultSet.next()) {
             result = new HashMap<>();
             result.put("QUESTIONS_UID", resultSet.getString("QUESTIONS_UID"));
             result.put("QUESTIONS", resultSet.getString("QUESTIONS"));
-            result.put("QRDERS", resultSet.getString("QRDERS"));
+            result.put("QRDERS", resultSet.getString("ORDERS"));
         }
+
         return result;
     }
 }
