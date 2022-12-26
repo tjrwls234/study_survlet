@@ -5,7 +5,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.yojulab.dao.SimpleWithDB;
+import com.yojulab.study_survlet.dao.SimpleWithDB;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

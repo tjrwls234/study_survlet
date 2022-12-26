@@ -1,4 +1,4 @@
-package com.yojulab.dao;
+package com.yojulab.study_survlet.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
